@@ -133,6 +133,8 @@ def check_spec(prefix,spec):
     #Note: check params exists
     check_true("command" in spec,True,"{0} defines job-spec without command field".format(prefix))
     check_true("params" in spec,True,"{0} defines job-spec without params field".format(prefix))
+    check_true("soft_time_limit" in spec,True,"{0} defines job-spec without soft time limit field".format(prefix))
+    check_true("time_limit" in spec,True,"{0} defines job-spec without time limit field".format(prefix))
     #Deprecated names
     check_true("required-queues" not in spec,False,"{0} defines job-spec with deprecated 'required-queues'".format(prefix))
     check_true("recommened-queues" not in spec,False,"{0} defines job-spec with deprecated 'recommended-queues'".format(prefix))
